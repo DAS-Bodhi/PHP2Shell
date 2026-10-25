@@ -1,0 +1,32 @@
+title: Reconnaissance Commands Executed by Web Server Account
+id: b2e6d4f3-8c05-4e3b-a042-3d7f9c5e21b8
+status: experimental
+description: >
+  Detects host reconnaissance binaries (id, whoami, uname, hostname) executed
+  under the web server account, typical of post-exploitation enumeration after
+  a web shell or command injection.
+author: Bodhisattwa Das
+date: 2026/10/25
+references:
+  - https://attack.mitre.org/techniques/T1033/
+  - https://attack.mitre.org/techniques/T1082/
+logsource:
+  product: linux
+  category: process_creation
+detection:
+  selection:
+    Image|endswith:
+      - '/id'
+      - '/whoami'
+      - '/uname'
+      - '/hostname'
+    User: 'www-data'
+  condition: selection
+falsepositives:
+  - Monitoring agents running as www-data
+level: high
+tags:
+  - attack.discovery
+  - attack.t1033
+  - attack.t1082
+  - attack.t1057

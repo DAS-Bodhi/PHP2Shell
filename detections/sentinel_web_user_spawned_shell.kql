@@ -1,0 +1,2 @@
+imProcessCreate
+| where (TargetProcessName endswith "/sh" or TargetProcessName endswith "/bash" or TargetProcessName endswith "/dash") and TargetUsername =~ "www-data"

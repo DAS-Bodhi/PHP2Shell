@@ -1,0 +1,32 @@
+title: Web Server Account Spawned a Shell
+id: a1f5c3e2-7b94-4d2a-9f31-2c6e8b4d10a7
+status: experimental
+description: >
+  Detects a shell interpreter executed under the web server service account
+  (www-data). A web server running an interactive shell strongly indicates a
+  web shell or command-injection compromise.
+author: Bodhisattwa Das
+date: 2026/10/25
+references:
+  - https://attack.mitre.org/techniques/T1505/003/
+  - https://attack.mitre.org/techniques/T1059/
+logsource:
+  product: linux
+  category: process_creation
+detection:
+  selection_shell:
+    Image|endswith:
+      - '/sh'
+      - '/bash'
+      - '/dash'
+  selection_user:
+    User: 'www-data'
+  condition: selection_shell and selection_user
+falsepositives:
+  - Rare legitimate maintenance scripts running as www-data
+level: high
+tags:
+  - attack.execution
+  - attack.t1059
+  - attack.persistence
+  - attack.t1505.003

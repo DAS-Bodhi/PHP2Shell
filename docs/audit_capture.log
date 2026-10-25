@@ -1,0 +1,26 @@
+type=SYSCALL msg=audit(1792892671.047:269): arch=c000003e syscall=59 success=yes exit=0 a0=7f63cd75c9d9 a1=7ffeeebe0180 a2=7ffeeebe2eb8 a3=7ffeeebe0220 items=3 ppid=7125 pid=57414 auid=4294967295 uid=33 gid=33 euid=33 suid=33 fsuid=33 egid=33 sgid=33 fsgid=33 tty=(none) ses=4294967295 comm="sh" exe="/bin/dash" subj=docker-default key="proc_exec"
+----
+--
+type=SYSCALL msg=audit(1792892671.051:270): arch=c000003e syscall=59 success=yes exit=0 a0=5606b126f368 a1=5606b126f2f0 a2=5606b126f318 a3=7f66d37059d0 items=3 ppid=57414 pid=57415 auid=4294967295 uid=33 gid=33 euid=0 suid=0 fsuid=0 egid=33 sgid=33 fsgid=33 tty=(none) ses=4294967295 comm="ping" exe="/bin/ping" subj=docker-default key="proc_exec"
+----
+--
+type=SYSCALL msg=audit(1792892674.067:289): arch=c000003e syscall=59 success=yes exit=0 a0=5606b126f608 a1=5606a821ec78 a2=5606b126f5b8 a3=7ffeef611edf items=3 ppid=57414 pid=57440 auid=4294967295 uid=33 gid=33 euid=33 suid=33 fsuid=33 egid=33 sgid=33 fsgid=33 tty=(none) ses=4294967295 comm="id" exe="/usr/bin/id" subj=docker-default key="proc_exec"
+----
+--
+type=SYSCALL msg=audit(1792892674.071:290): arch=c000003e syscall=59 success=yes exit=0 a0=5606b126f628 a1=5606b126f5c0 a2=5606b126f5d8 a3=7f66d37059d0 items=3 ppid=57414 pid=57441 auid=4294967295 uid=33 gid=33 euid=33 suid=33 fsuid=33 egid=33 sgid=33 fsgid=33 tty=(none) ses=4294967295 comm="uname" exe="/bin/uname" subj=docker-default key="proc_exec"
+----
+--
+type=SYSCALL msg=audit(1792892810.030:1125): arch=c000003e syscall=59 success=yes exit=0 a0=7f63cd75c9d9 a1=7ffeeebe0180 a2=7ffeeebe2eb8 a3=7ffeeebe0220 items=3 ppid=7155 pid=58566 auid=4294967295 uid=33 gid=33 euid=33 suid=33 fsuid=33 egid=33 sgid=33 fsgid=33 tty=(none) ses=4294967295 comm="sh" exe="/bin/dash" subj=docker-default key="proc_exec"
+----
+--
+type=SYSCALL msg=audit(1792892810.034:1126): arch=c000003e syscall=59 success=yes exit=0 a0=560424305368 a1=5604243052f0 a2=560424305318 a3=7f22eae339d0 items=3 ppid=58566 pid=58567 auid=4294967295 uid=33 gid=33 euid=0 suid=0 fsuid=0 egid=33 sgid=33 fsgid=33 tty=(none) ses=4294967295 comm="ping" exe="/bin/ping" subj=docker-default key="proc_exec"
+----
+--
+type=SYSCALL msg=audit(1792892813.042:1145): arch=c000003e syscall=59 success=yes exit=0 a0=560424305608 a1=560404a1ec78 a2=5604243055b8 a3=7ffd421d8edf items=3 ppid=58566 pid=58592 auid=4294967295 uid=33 gid=33 euid=33 suid=33 fsuid=33 egid=33 sgid=33 fsgid=33 tty=(none) ses=4294967295 comm="id" exe="/usr/bin/id" subj=docker-default key="proc_exec"
+----
+--
+type=SYSCALL msg=audit(1792892813.050:1146): arch=c000003e syscall=59 success=yes exit=0 a0=560424305628 a1=5604243055c0 a2=5604243055d8 a3=7f22eae339d0 items=3 ppid=58566 pid=58593 auid=4294967295 uid=33 gid=33 euid=33 suid=33 fsuid=33 egid=33 sgid=33 fsgid=33 tty=(none) ses=4294967295 comm="uname" exe="/bin/uname" subj=docker-default key="proc_exec"
+----
+--
+type=EXECVE msg=audit(1792892912.549:1757): argc=4 a0="grep" a1="--color=auto" a2="-A1" a3="docker-default"
+type=SYSCALL msg=audit(1792892912.549:1757): arch=c000003e syscall=59 success=yes exit=0 a0=7ffdbce669b0 a1=7f838ba33e70 a2=5601e42221d0 a3=8 items=3 ppid=2806 pid=59415 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=2 comm="grep" exe="/usr/bin/grep" subj=unconfined key="proc_exec"
