@@ -42,3 +42,16 @@ convertible to Sentinel, Elastic, Splunk, etc. Full walkthrough in
 ## Disclaimer
 For education and authorised testing only. The author is not responsible for
 misuse.
+## Demo
+
+**1. Command injection on DVWA** — attacker commands (`id`, `uname`) run through the web app:
+
+![Command injection](docs/screenshots/01-command-injection.png)
+
+**2. Telemetry (auditd)** — the web server account (uid=33, www-data) spawning a shell, captured via execve:
+
+![auditd telemetry](docs/screenshots/02-auditd-telemetry.png)
+
+**3. Reverse-shell listener** — the Python listener catching and relaying a live shell:
+
+![Listener](docs/screenshots/03-listener-shell.png)

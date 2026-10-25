@@ -1,4 +1,5 @@
-==> /var/log/apache2/access.log <==
+sudo: a password is required
+og <==
 
 ==> /var/log/apache2/error.log <==
 [Sat Oct 24 23:35:57.503603 2026] [mpm_prefork:notice] [pid 284] AH00163: Apache/2.4.25 (Debian) configured -- resuming normal operations
